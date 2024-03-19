@@ -1,14 +1,10 @@
-import './App.css'
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './components/Home';
-import ChatPage from './components/ChatPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./components/Home"
+import ChatPage from "./components/ChatPage";
+import socketIO from "socket.io-client"
 
-import socketIO from "socket.io-client";
-const socket = socketIO.connect("http://localhost:4000");
-
+const socket = socketIO.connect("http://localhost:4000")
 function App() {
-
   return (
     <BrowserRouter>
       <div>
@@ -18,7 +14,8 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+
   );
 }
 
-export default App
+export default App;
